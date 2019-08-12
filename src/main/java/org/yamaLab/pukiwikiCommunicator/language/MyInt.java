@@ -14,7 +14,10 @@ public class MyInt extends MyNumber
     {
 //        if(y.getClass().getName().equals("MyInt")){
     	if(y.isKind("myint")){
-            return val!=((MyInt)y).val;
+            return val!=(long)(((MyInt)y).val);
+        }
+    	if(y.isKind("mylong")){
+            return val!=y.val;
         }
 //        if(y.getClass().getName().equals("MyDouble")){
     	if(y.isKind("mydouble")){
@@ -26,7 +29,10 @@ public class MyInt extends MyNumber
     {
 //        if(y.getClass().getName().equals("MyInt")){
     	if(y.isKind("myint")){
-            return new MyInt(val%((MyInt)y).val);
+            return new MyLong(val%((MyInt)y).val);
+        }
+    	if(y.isKind("mylong")){
+            return new MyLong(val%((MyLong)y).val);
         }
 //        if(y.getClass().getName().equals("MyDouble")){
     	if(y.isKind("mydouble")){
@@ -195,7 +201,7 @@ public class MyInt extends MyNumber
     {
 //        if(y.getClass().getName().equals("MyInt")){
     	if(y.isKind("myint")){
-            return new MyInt(val/((MyInt)y).val);
+            return new MyLong(val/((MyInt)y).val);
         }
     	if(y.isKind("mylong")){
             return new MyLong((long)val/((MyLong)y).val);
@@ -213,7 +219,7 @@ public class MyInt extends MyNumber
     {
 //        if(y.getClass().getName().equals("MyInt")){
     	if(y.isKind("myint")){
-            return new MyInt(val*((MyInt)y).val);
+            return new MyLong(val*((MyInt)y).val);
         }
     	if(y.isKind("mylong")){
             return new MyLong((long)val*((MyLong)y).val);
@@ -228,7 +234,7 @@ public class MyInt extends MyNumber
     {
 //        if(y.getClass().getName().equals("MyInt")){
     	if(y.isKind("myint")){
-            return new MyInt(val-((MyInt)y).val);
+            return new MyLong(val-((MyInt)y).val);
         }
     	if(y.isKind("mylong")){
             return new MyLong((long)val-((MyLong)y).val);
@@ -244,7 +250,7 @@ public class MyInt extends MyNumber
 //        if(y.getClass().getName().equals("MyInt")){
     	if(y.isKind("myint")){
             int r=val+((MyInt)y).val;
-            return new MyInt(r);
+            return new MyLong(r);
         }
     	if(y.isKind("mylong")){
             long r=val+((MyLong)y).val;
@@ -260,8 +266,8 @@ public class MyInt extends MyNumber
     {
 //        if(y.getClass().getName().equals("MyInt")){
     	if(y.isKind("myint")){
-            int r=val & ((MyInt)y).val;
-            return new MyInt(r);
+            long r=val & ((MyInt)y).val;
+            return new MyLong(r);
         }
     	if(y.isKind("mylong")){
             long r=val & ((MyLong)y).val;
@@ -275,8 +281,8 @@ public class MyInt extends MyNumber
     {
 //        if(y.getClass().getName().equals("MyInt")){
     	if(y.isKind("myint")){
-            int r=val | ((MyInt)y).val;
-            return new MyInt(r);
+            long r=val | ((MyInt)y).val;
+            return new MyLong(r);
         }
     	if(y.isKind("mylong")){
             long r=val | ((MyLong)y).val;

@@ -20,6 +20,9 @@ public class MyDouble extends MyInt
     	if(y.isKind("myint")){
     		return val!=(double)(((MyInt)y).val);
     	}
+    	if(y.isKind("mylong")){
+            return val!=((MyLong)y).val;
+        }
     	if(y.isKind("mydouble")){
             return val!=((MyDouble)y).val;
         }
@@ -31,6 +34,10 @@ public class MyDouble extends MyInt
     	if(y.isKind("myint")){
             return new MyDouble(val%((MyInt)y).val);
         }
+    	if(y.isKind("mylong")){
+            return new MyDouble(val%((MyLong)y).val);
+        }
+
 //        if(y.getClass().getName().equals("MyDouble")){
     	if(y.isKind("mydouble")){
             return new MyDouble(val%((MyDouble)y).val);
@@ -75,6 +82,9 @@ public class MyDouble extends MyInt
     	if(y.isKind("myint")){
             return val>=(double)(((MyInt)y).val);
         }
+    	if(y.isKind("mylong")){
+            return val>=(double)(((MyLong)y).val);
+        }
 //        if(y.getClass().getName().equals("MyDouble")){
     	if(y.isKind("mydouble")){
             return val>=((MyDouble)y).val;
@@ -87,6 +97,9 @@ public class MyDouble extends MyInt
     	  if(y.isKind("myint")){
             return val>(double)(((MyInt)y).val);
         }
+    	  if(y.isKind("mylong")){
+              return val>(double)(((MyLong)y).val);
+          }
 //        if(y.getClass().getName().equals("MyDouble")){
     	  if(y.isKind("mydouble")){
             return val>((MyDouble)y).val;
@@ -98,6 +111,9 @@ public class MyDouble extends MyInt
         if(y.isKind("myint")){
             return val<(double)(((MyInt)y).val);
         }
+        if(y.isKind("mylong")){
+            return val<(double)(((MyLong)y).val);
+        }
     	if(y.isKind("mydouble")){
             return val<((MyDouble)y).val;
         }
@@ -107,6 +123,9 @@ public class MyDouble extends MyInt
     {
         if(y.isKind("myint")){
             return val==(double)(((MyInt)y).val);
+        }
+        if(y.isKind("mylong")){
+            return val==(double)(((MyLong)y).val);
         }
         if(y.isKind("mydouble")){
             return val==((MyDouble)y).val;
@@ -118,6 +137,9 @@ public class MyDouble extends MyInt
 //        if(y.getClass().getName().equals("MyInt")){
     	if(y.isKind("myint")){
             return val<=(double)(((MyInt)y).val);
+        }
+    	if(y.isKind("mylong")){
+            return val<=(double)(((MyLong)y).val);
         }
 //        if(y.getClass().getName().equals("MyDouble")){
     	if(y.isKind("mydouble")){
@@ -133,6 +155,21 @@ public class MyDouble extends MyInt
 //         if(y.getClass().getName().equals("MyInt")){
         if(y.isKind("myint")){
             int yy=((MyInt)y).val;
+            if(yy==0) return new MyDouble(1.0);
+            if(yy>0){
+                xd=1.0;
+                for(i=0;i<yy;i++) xd=xd*val;
+                return new MyDouble(xd);
+            }
+            if(yy<0){
+                xd=1.0;
+                for(i=0;i<-yy;i++) xd=xd/val;
+                return new MyDouble(xd);
+            }
+            return null;
+        }
+        if(y.isKind("mylong")){
+            long yy=((MyLong)y).val;
             if(yy==0) return new MyDouble(1.0);
             if(yy>0){
                 xd=1.0;
@@ -162,6 +199,9 @@ public class MyDouble extends MyInt
     	if(y.isKind("myint")){
             return new MyDouble(val/((MyInt)y).val);
         }
+    	if(y.isKind("mylong")){
+            return new MyDouble(val/((MyLong)y).val);
+        }
 //        if(y.getClass().getName().equals("MyDouble")){
     	if(y.isKind("mydouble")){
             return new MyDouble(val/((MyDouble)y).val);
@@ -173,6 +213,9 @@ public class MyDouble extends MyInt
 //        if(y.getClass().getName().equals("MyInt")){
     	if(y.isKind("myint")){
             return new MyDouble(val*((MyInt)y).val);
+        }
+    	if(y.isKind("mylong")){
+            return new MyDouble(val*((MyLong)y).val);
         }
 //        if(y.getClass().getName().equals("MyDouble")){
     	if(y.isKind("mydouble")){
@@ -186,6 +229,9 @@ public class MyDouble extends MyInt
     	if(y.isKind("myint")){
             return new MyDouble(val-((MyInt)y).val);
         }
+    	if(y.isKind("mylong")){
+            return new MyDouble(val-((MyLong)y).val);
+        }
 //        if(y.getClass().getName().equals("MyDouble")){
     	if(y.isKind("mydouble")){
             return new MyDouble(val-((MyDouble)y).val);
@@ -197,6 +243,9 @@ public class MyDouble extends MyInt
 //        if(y.getClass().getName().equals("MyInt")){
     	if(y.isKind("myint")){
             return new MyDouble(val+((MyInt)y).val);
+        }
+    	if(y.isKind("mylong")){
+            return new MyDouble(val+((MyLong)y).val);
         }
 //        if(y.getClass().getName().equals("MyDouble")){
     	if(y.isKind("mydouble")){

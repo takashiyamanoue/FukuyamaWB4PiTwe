@@ -45,6 +45,9 @@ public class PrintS extends java.lang.Object
     	if(s.isKind("myint")){
             printInt(s); return;
         }
+    	if(s.isKind("mylong")){
+            printLong(s); return;
+        }
 //        if(s.getClass().getName().equals("MyDouble")){
     	if(s.isKind("mydouble")){
             printDouble(s); return;
@@ -58,6 +61,10 @@ public class PrintS extends java.lang.Object
     public void printInt(LispObject s)
     {
         out.append(((MyInt)s).val);
+    }
+    public void printLong(LispObject s)
+    {
+        out.append(((MyLong)s).val);
     }
     public void printDouble(LispObject s)
     {
