@@ -40,6 +40,8 @@ public class BasicParser extends Parser
             ListCell color=new ListCell(); color.d=lisp.nilSymbol;
 
             dmy=rB();
+            if(message.isTracing())
+                message.parseCommand("println parse pset "+lisp.print.print(x));
 
             if(!parseCoordinate(x1,y1)) {
                 isLineTo=true;
@@ -120,6 +122,8 @@ public class BasicParser extends Parser
             ListCell color=new ListCell(); color.d=lisp.nilSymbol;
 
             dmy=rB();
+            if(message.isTracing())
+                message.parseCommand("println parse line "+lisp.print.print(x));
 
             if(!parseCoordinate(x1,y1)) {
                 isLineTo=true;
@@ -169,6 +173,8 @@ public class BasicParser extends Parser
     {
         ListCell type=new ListCell();
         if(is("?")||is("print")||is("PRINT")){
+            if(message.isTracing())
+                message.parseCommand("println parse retrun "+lisp.print.print(x));
             if(!parseExpressionList(x,type)) {
                 putErrorMessage("Syntax Error at statement list of PRINT statement.");
                 return false;
@@ -187,19 +193,24 @@ public class BasicParser extends Parser
             ListCell x=new ListCell();
             x.d=lisp.nilSymbol;
             x.a=lisp.nilSymbol;
-            if(parseStatement(x)){
-                String px=lisp.print.print(x);
+            try{
+              if(parseStatement(x)){
                 if(lisp.gui.isTracing()){
-                    lisp.gui.parseCommand("guiMessage "+x);
+                    String px=lisp.print.print(x);
+                    lisp.gui.parseCommand("guiMessage "+px);
                 }
                 progn=lisp.nconc(progn,lisp.car(x));
                 dmy=rB();
-            }
-            else if(is(":")||is(";")){}
-            else
-            {
+              }
+             else if(is(":")||is(";")){}
+              else
+              {
                 lisp.rplca(slist,progn);
                 return true;
+              }
+            }
+            catch(Exception e){
+            	System.out.println("error.."+e);
             }
         dmy=rB();
         dmy=is(":"); dmy=is(";");
@@ -224,6 +235,9 @@ public class BasicParser extends Parser
         if(!(is("for")||is("FOR"))) return false;
 
         dmy=rB();
+        if(message.isTracing())
+            message.parseCommand("println parse for "+lisp.print.print(x));
+
         ListCell vi=new ListCell(); vi.d=lisp.nilSymbol;
         ListCell type=new ListCell(); type.d=lisp.nilSymbol;
         if(!isName(vi,type)) {
@@ -317,6 +331,8 @@ public class BasicParser extends Parser
         dmy=rB();
         if(!(is("dim")||is("DIM"))) return false;
         dmy=rB();
+        if(message.isTracing())
+            message.parseCommand("println parse dim "+lisp.print.print(x));        
         ListCell name=new ListCell(); name.d=lisp.nilSymbol;
         ListCell type=new ListCell(); type.d=lisp.nilSymbol;
         if(!isName(name,type)) {
@@ -386,11 +402,16 @@ public class BasicParser extends Parser
         ListCell type=new ListCell(); type.d=lisp.nilSymbol;
         if(!(is("if")||is("IF"))) return false;
         dmy=rB();
+        if(message.isTracing())
+            message.parseCommand("println parse if2 "+lisp.print.print(x));
         ListCell rlop=new ListCell(); rlop.d=lisp.nilSymbol;
 //        if(!parseRelational(rlop)) {
         if(!parseExpression2(rlop,type)) {
             putErrorMessage("Syntax Error at relational operation of IF statement.");
             return false;
+        }
+        if(message.isTracing()){
+        	message.parseCommand("println parse if2-rlop "+lisp.print.print(rlop));
         }
         dmy=rB();
         if(!(is("then")||is("THEN"))) {
@@ -441,6 +462,8 @@ public class BasicParser extends Parser
         ((ListCell)x).a=lisp.nilSymbol; ((ListCell)x).d=lisp.nilSymbol;
         if(is("{")) {
            dmy=rB();
+           if(message.isTracing())
+               message.parseCommand("println parse if "+x);
            if(!parseStatementList(x)) {
                putErrorMessage("Syntax error at statement list of Block, {...}");
                return false;
@@ -478,6 +501,8 @@ public class BasicParser extends Parser
         type=new ListCell();
         if(!(is("if")||is("IF"))) return false;
         dmy=rB();
+        if(message.isTracing())
+            message.parseCommand("println parse if "+lisp.print.print(x));
         ListCell rlop=new ListCell(); rlop.d=lisp.nilSymbol;
 //        if(!parseRelational(rlop))
         if(!parseExpression2(rlop,type))
@@ -518,6 +543,8 @@ public class BasicParser extends Parser
         LispObject rtn;
         if(!(is("return")||is("RETURN"))) return false;
         dmy=rB();
+        if(message.isTracing())
+            message.parseCommand("println parse retrun "+lisp.print.print(x));
         if(parseExpression(x,type)) {
             rtn=lisp.cons(lisp.recSymbol("return"),
                 lisp.cons(lisp.car(x),lisp.nilSymbol));
@@ -568,6 +595,8 @@ public class BasicParser extends Parser
         dmy=rB();
         if(!(is("def")||is("DEF"))) return false;
         dmy=rB();
+        if(message.isTracing())
+            message.parseCommand("println parse def "+lisp.print.print(x));
         ListCell name=new ListCell(); name.d=lisp.nilSymbol;
         ListCell type=new ListCell(); type.d=lisp.nilSymbol;
         if(!isName(name,type)) {

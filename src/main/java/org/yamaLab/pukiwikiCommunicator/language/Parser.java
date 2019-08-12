@@ -13,6 +13,7 @@ public class Parser extends java.lang.Object
     {
         ListCell w=new ListCell();
         w.d=lisp.nilSymbol;
+        w.a=lisp.nilSymbol;
         if(!parseExpression(w,type)) {
             ((ListCell)x).a=lisp.cons(lisp.sym_list,w);
         	return true;
@@ -31,7 +32,6 @@ public class Parser extends java.lang.Object
         if(!is("(")) return false;
         if(!parseExpressionList(x,type))  return false;
         if(!is(")")) return false;
-        
         return true;
 
     }

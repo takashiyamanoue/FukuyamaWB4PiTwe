@@ -654,7 +654,7 @@ public class ALisp extends java.lang.Object implements Runnable
     {
         LispObject rtn;
         if(gui.isTracing())
-                 plist("eval..",form);
+            plist("eval..",form);
         if(atom(form)){
             if(numberp(form)) rtn= form;
             else
@@ -802,6 +802,9 @@ public class ALisp extends java.lang.Object implements Runnable
     }
     public boolean Null(LispObject s)
     {
+    	if(s==null){
+    		System.out.println(" error... null");
+    	}
         if(!atom(s)) return false;
         if(s==nilSymbol) return true;
         if(eq(nilSymbol,s)) return true;

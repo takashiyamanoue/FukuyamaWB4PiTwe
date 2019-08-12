@@ -11,9 +11,13 @@ public class PrintS extends java.lang.Object
     }
     public String print(LispObject s)
     {
+    	if(s==null){
+    		System.out.println("try to write null pointer!");
+    		return "...null!...";   		
+    	}
     	if(lisp.Null(s)){
-    		System.out.println("try to write null!");
-    		return "...null!...";
+    		System.out.println("try to write nil!");
+    		return "...nil!...";
     	}
         out=new StringBuffer(""); printS(s); return out.toString();
     }
@@ -74,6 +78,9 @@ public class PrintS extends java.lang.Object
     public StringBuffer out;
     public void printS(LispObject s)
     {
+    	if(s==null){
+    		System.out.println("try to write null pointer!");
+    	}
         if(lisp.atom(s)) printAtom(s);
         else printList(s);
     }
