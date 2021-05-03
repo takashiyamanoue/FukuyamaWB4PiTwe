@@ -1,0 +1,646 @@
+surl=http://192.168.1.10/ex01/?LightSensor-01
+y2
+saveButtonDebugFrame
+TwitterController TwitterController
+TweetTwitter
+TwitterLoginControllerTwitterLoginController
+ ... complete the GPIO #02 circuit and see the listener feedback here in the console.
+start pi4j thread
+editUrl=http://192.168.1.10/ex01/?LightSensor-01
+
+setPageOfTheURL editUrl=http://192.168.1.10/ex01/?LightSensor-01
+connectButton.actionPerformed, url=http://192.168.1.10/ex01/?LightSensor-01
+new getMethod(http://192.168.1.10/ex01/?LightSensor-01)
+l=<?xml
+r=?>
+l=<head
+r=</head>
+l=<meta
+r=/>
+pageCharSet=UTF-8
+l=<body>
+r=</body>
+l=<div id="header">
+r=</div>
+l=<span class="small">
+r=</span>
+setPageOfTheURL(http://192.168.1.10/ex01/?LightSensor-01)baseUrl=http://192.168.1.10/ex01/
+l=<pre>
+r=</pre>
+setPageOfTheURL editUrl=http://192.168.1.10/ex01/?LightSensor-01
+connectButton.actionPerformed, url=http://192.168.1.10/ex01/?LightSensor-01
+new getMethod(http://192.168.1.10/ex01/?LightSensor-01)
+l=<?xml
+r=?>
+l=<head
+r=</head>
+l=<meta
+r=/>
+pageCharSet=UTF-8
+l=<body>
+r=</body>
+l=<div id="header">
+r=</div>
+l=<span class="small">
+r=</span>
+setPageOfTheURL(http://192.168.1.10/ex01/?LightSensor-01)baseUrl=http://192.168.1.10/ex01/
+editPageButton.actionPerformed, event=null
+editUrl=http://192.168.1.10/ex01/?cmd=edit&page=LightSensor-01
+baseUrl=http://192.168.1.10/ex01/
+
+http://192.168.1.10/ex01/?cmd=edit&page=LightSensor-01
+
+connectButton.actionPerformed, url=http://192.168.1.10/ex01/?cmd=edit&page=LightSensor-01
+new getMethod(http://192.168.1.10/ex01/?cmd=edit&page=LightSensor-01)
+l=<form
+r=</form>
+form= action="./" method="post" class="_plugin_edit_edit_form" style="margin-bottom:0;">
+<div><input type="hidden" name="encode_hint" value="ぷ" /></div>
+  <select name="template_page">
+   <option value="">-- 雛形とするページ --</option>
+   <option value="a">a</option>
+   <option value="AutoTicketLinkName">AutoTicketLinkName</option>
+   <option value="BracketName">BracketName</option>
+   <option value="FormattingRules">FormattingRules</option>
+   <option value="FrontPage">FrontPage</option>
+   <option value="Help">Help</option>
+   <option value="InterWiki">InterWiki</option>
+   <option value="InterWikiName">InterWikiName</option>
+   <option value="InterWikiSandBox">InterWikiSandBox</option>
+   <option value="LightSensor-01">LightSensor-01</option>
+   <option value="MenuBar">MenuBar</option>
+   <option value="PHP">PHP</option>
+   <option value="PukiWiki">PukiWiki</option>
+   <option value="PukiWiki/1.4">PukiWiki/1.4</option>
+   <option value="PukiWiki/1.4/Manual">PukiWiki/1.4/Manual</option>
+   <option value="PukiWiki/1.4/Manual/Plugin">PukiWiki/1.4/Manual/Plugin</option>
+   <option value="PukiWiki/1.4/Manual/Plugin/A-D">PukiWiki/1.4/Manual/Plugin/A-D</option>
+   <option value="PukiWiki/1.4/Manual/Plugin/E-G">PukiWiki/1.4/Manual/Plugin/E-G</option>
+   <option value="PukiWiki/1.4/Manual/Plugin/H-K">PukiWiki/1.4/Manual/Plugin/H-K</option>
+   <option value="PukiWiki/1.4/Manual/Plugin/L-N">PukiWiki/1.4/Manual/Plugin/L-N</option>
+   <option value="PukiWiki/1.4/Manual/Plugin/O-R">PukiWiki/1.4/Manual/Plugin/O-R</option>
+   <option value="PukiWiki/1.4/Manual/Plugin/S-U">PukiWiki/1.4/Manual/Plugin/S-U</option>
+   <option value="PukiWiki/1.4/Manual/Plugin/V-Z">PukiWiki/1.4/Manual/Plugin/V-Z</option>
+   <option value="SandBox">SandBox</option>
+   <option value="WikiEngines">WikiEngines</option>
+   <option value="WikiName">WikiName</option>
+   <option value="WikiWikiWeb">WikiWikiWeb</option>
+   <option value="YukiWiki">YukiWiki</option>
+  </select>
+  <input type="submit" name="template" value="読込" accesskey="r" />
+  <br />
+  
+  <input type="hidden" name="cmd"    value="edit" />
+  <input type="hidden" name="page"   value="LightSensor-01" />
+  <input type="hidden" name="digest" value="f71bd8f9421182802801c046948d0d2b" />
+  <input type="hidden" id="_msg_edit_cancel_confirm" value="編集中のテキストは破棄されます。よろしいですか ?" />
+  <input type="hidden" id="_msg_edit_unloadbefore_message" value="入力したデータは保存されません。" />
+  <textarea name="msg" rows="20" cols="80">[[FrontPage]]
+
+ 'objectPage http://192.168.10.14/ex01/?LightSensor-01 or http://192.168.10.14/ex01/?LightSensor-01
+ objectPage http://192.168.1.10/ex01/?LightSensor-01 or http://192.168.1.10/ex01/?LightSensor-01
+ device yamaRasPiDp1_1 or yamaRasPiDp1_1 start after no write for 10 min.
+ command: set readInterval=15000
+ command: set execInterval=0
+ command: program i2cLightSensor
+ program: '
+ program: ' init i2c
+ program: ex(&quot;pi4j&quot;, &quot;i2c use 1&quot;)
+ program: '
+ program: ' init lux sensor 
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x03&quot;) 'power up the tsl2561 lux sensor
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x81,0x00&quot;)
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x86,0x00&quot;) 'scale
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x00&quot;) 'power down
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x03&quot;) ' power up again
+ program: delay(50)
+ program: '
+ program: 'get the lux value
+ program: v1=ex(&quot;pi4j&quot;, &quot;i2c read1 0x29,0x8c&quot;)
+ program: v2=ex(&quot;pi4j&quot;, &quot;i2c read1 0x29,0x8d&quot;)
+ program: v=s2i(v2)*256+s2i(v1)
+ program: '
+ program: ex(&quot;pi4j&quot;, &quot;i2c close.&quot;)
+ program: ex(&quot;service&quot;,&quot;clear sendBuffer&quot;)
+ program: ex(&quot;service&quot;,&quot;putSendBuffer device=light, Date=&quot;+ex(&quot;service&quot;,&quot;getCurrentDate.&quot;)+&quot;, v=&quot;+v);
+ program: ex(&quot;service&quot;,&quot;sendResults.&quot;)
+ command: end i2cLightSensor
+ command: run i2cLightSensor
+ result:
+ device=light, Date=2021/4/30/ 0:43:4, v=0
+ currentDevice=&quot;yamaRasPiDp1_1&quot;,Date=2021/4/30/ 0:43:4
+</textarea>
+  <br />
+  <div style="float:left;">
+   <input type="submit" name="preview" value="プレビュー" accesskey="p" />
+   <input type="submit" name="write"   value="ページの更新" accesskey="s" />
+   
+   <input type="checkbox" name="notimestamp" id="_edit_form_notimestamp" value="true" />
+   <label for="_edit_form_notimestamp"><span class="small">タイムスタンプを変更しない</span></label>
+&nbsp;
+  </div>
+  <textarea name="original" rows="1" cols="1" style="display:none">[[FrontPage]]
+
+ 'objectPage http://192.168.10.14/ex01/?LightSensor-01 or http://192.168.10.14/ex01/?LightSensor-01
+ objectPage http://192.168.1.10/ex01/?LightSensor-01 or http://192.168.1.10/ex01/?LightSensor-01
+ device yamaRasPiDp1_1 or yamaRasPiDp1_1 start after no write for 10 min.
+ command: set readInterval=15000
+ command: set execInterval=0
+ command: program i2cLightSensor
+ program: '
+ program: ' init i2c
+ program: ex(&quot;pi4j&quot;, &quot;i2c use 1&quot;)
+ program: '
+ program: ' init lux sensor 
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x03&quot;) 'power up the tsl2561 lux sensor
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x81,0x00&quot;)
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x86,0x00&quot;) 'scale
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x00&quot;) 'power down
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x03&quot;) ' power up again
+ program: delay(50)
+ program: '
+ program: 'get the lux value
+ program: v1=ex(&quot;pi4j&quot;, &quot;i2c read1 0x29,0x8c&quot;)
+ program: v2=ex(&quot;pi4j&quot;, &quot;i2c read1 0x29,0x8d&quot;)
+ program: v=s2i(v2)*256+s2i(v1)
+ program: '
+ program: ex(&quot;pi4j&quot;, &quot;i2c close.&quot;)
+ program: ex(&quot;service&quot;,&quot;clear sendBuffer&quot;)
+ program: ex(&quot;service&quot;,&quot;putSendBuffer device=light, Date=&quot;+ex(&quot;service&quot;,&quot;getCurrentDate.&quot;)+&quot;, v=&quot;+v);
+ program: ex(&quot;service&quot;,&quot;sendResults.&quot;)
+ command: end i2cLightSensor
+ command: run i2cLightSensor
+ result:
+ device=light, Date=2021/4/30/ 0:43:4, v=0
+ currentDevice=&quot;yamaRasPiDp1_1&quot;,Date=2021/4/30/ 0:43:4
+</textarea>
+ 
+z=[[FrontPage]]
+
+ 'objectPage http://192.168.10.14/ex01/?LightSensor-01 or http://192.168.10.14/ex01/?LightSensor-01
+ objectPage http://192.168.1.10/ex01/?LightSensor-01 or http://192.168.1.10/ex01/?LightSensor-01
+ device yamaRasPiDp1_1 or yamaRasPiDp1_1 start after no write for 10 min.
+ command: set readInterval=15000
+ command: set execInterval=0
+ command: program i2cLightSensor
+ program: '
+ program: ' init i2c
+ program: ex(&quot;pi4j&quot;, &quot;i2c use 1&quot;)
+ program: '
+ program: ' init lux sensor 
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x03&quot;) 'power up the tsl2561 lux sensor
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x81,0x00&quot;)
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x86,0x00&quot;) 'scale
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x00&quot;) 'power down
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x03&quot;) ' power up again
+ program: delay(50)
+ program: '
+ program: 'get the lux value
+ program: v1=ex(&quot;pi4j&quot;, &quot;i2c read1 0x29,0x8c&quot;)
+ program: v2=ex(&quot;pi4j&quot;, &quot;i2c read1 0x29,0x8d&quot;)
+ program: v=s2i(v2)*256+s2i(v1)
+ program: '
+ program: ex(&quot;pi4j&quot;, &quot;i2c close.&quot;)
+ program: ex(&quot;service&quot;,&quot;clear sendBuffer&quot;)
+ program: ex(&quot;service&quot;,&quot;putSendBuffer device=light, Date=&quot;+ex(&quot;service&quot;,&quot;getCurrentDate.&quot;)+&quot;, v=&quot;+v);
+ program: ex(&quot;service&quot;,&quot;sendResults.&quot;)
+ command: end i2cLightSensor
+ command: run i2cLightSensor
+ result:
+ device=light, Date=2021/4/30/ 0:43:4, v=0
+ currentDevice=&quot;yamaRasPiDp1_1&quot;,Date=2021/4/30/ 0:43:4
+</textarea>
+  <br />
+  <div style="float:left;">
+   <input type="submit" name="preview" value="プレビュー" accesskey="p" />
+   <input type="submit" name="write"   value="ページの更新" accesskey="s" />
+   
+   <input type="checkbox" name="notimestamp" id="_edit_form_notimestamp" value="true" />
+   <label for="_edit_form_notimestamp"><span class="small">タイムスタンプを変更しない</span></label>
+&nbsp;
+  </div>
+  <textarea name="original" rows="1" cols="1" style="display:none">[[FrontPage]]
+
+ 'objectPage http://192.168.10.14/ex01/?LightSensor-01 or http://192.168.10.14/ex01/?LightSensor-01
+ objectPage http://192.168.1.10/ex01/?LightSensor-01 or http://192.168.1.10/ex01/?LightSensor-01
+ device yamaRasPiDp1_1 or yamaRasPiDp1_1 start after no write for 10 min.
+ command: set readInterval=15000
+ command: set execInterval=0
+ command: program i2cLightSensor
+ program: '
+ program: ' init i2c
+ program: ex(&quot;pi4j&quot;, &quot;i2c use 1&quot;)
+ program: '
+ program: ' init lux sensor 
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x03&quot;) 'power up the tsl2561 lux sensor
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x81,0x00&quot;)
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x86,0x00&quot;) 'scale
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x00&quot;) 'power down
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x03&quot;) ' power up again
+ program: delay(50)
+ program: '
+ program: 'get the lux value
+ program: v1=ex(&quot;pi4j&quot;, &quot;i2c read1 0x29,0x8c&quot;)
+ program: v2=ex(&quot;pi4j&quot;, &quot;i2c read1 0x29,0x8d&quot;)
+ program: v=s2i(v2)*256+s2i(v1)
+ program: '
+ program: ex(&quot;pi4j&quot;, &quot;i2c close.&quot;)
+ program: ex(&quot;service&quot;,&quot;clear sendBuffer&quot;)
+ program: ex(&quot;service&quot;,&quot;putSendBuffer device=light, Date=&quot;+ex(&quot;service&quot;,&quot;getCurrentDate.&quot;)+&quot;, v=&quot;+v);
+ program: ex(&quot;service&quot;,&quot;sendResults.&quot;)
+ command: end i2cLightSensor
+ command: run i2cLightSensor
+ result:
+ device=light, Date=2021/4/30/ 0:43:4, v=0
+ currentDevice=&quot;yamaRasPiDp1_1&quot;,Date=2021/4/30/ 0:43:4
+</textarea>
+ 
+j=1555 k=1562
+dataStart=result:
+ device=light, Date=2021/4/30/ 0:43:4, v=0
+ currentDevice=&quot;yamaRasPiDp1_1&quot;,Date=2021/4/30/ 0:43:4
+</textarea>
+  <br />
+  <div style="float:left;">
+   <input type="submit" name="preview" value="プレビュー" accesskey="p" />
+   <input type="submit" name="write"   value="ページの更新" accesskey="s" />
+   
+   <input type="checkbox" name="notimestamp" id="_edit_form_notimestamp" value="true" />
+   <label for="_edit_form_notimestamp"><span class="small">タイムスタンプを変更しない</span></label>
+&nbsp;
+  </div>
+  <textarea name="original" rows="1" cols="1" style="display:none">[[FrontPage]]
+
+ 'objectPage http://192.168.10.14/ex01/?LightSensor-01 or http://192.168.10.14/ex01/?LightSensor-01
+ objectPage http://192.168.1.10/ex01/?LightSensor-01 or http://192.168.1.10/ex01/?LightSensor-01
+ device yamaRasPiDp1_1 or yamaRasPiDp1_1 start after no write for 10 min.
+ command: set readInterval=15000
+ command: set execInterval=0
+ command: program i2cLightSensor
+ program: '
+ program: ' init i2c
+ program: ex(&quot;pi4j&quot;, &quot;i2c use 1&quot;)
+ program: '
+ program: ' init lux sensor 
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x03&quot;) 'power up the tsl2561 lux sensor
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x81,0x00&quot;)
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x86,0x00&quot;) 'scale
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x00&quot;) 'power down
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x03&quot;) ' power up again
+ program: delay(50)
+ program: '
+ program: 'get the lux value
+ program: v1=ex(&quot;pi4j&quot;, &quot;i2c read1 0x29,0x8c&quot;)
+ program: v2=ex(&quot;pi4j&quot;, &quot;i2c read1 0x29,0x8d&quot;)
+ program: v=s2i(v2)*256+s2i(v1)
+ program: '
+ program: ex(&quot;pi4j&quot;, &quot;i2c close.&quot;)
+ program: ex(&quot;service&quot;,&quot;clear sendBuffer&quot;)
+ program: ex(&quot;service&quot;,&quot;putSendBuffer device=light, Date=&quot;+ex(&quot;service&quot;,&quot;getCurrentDate.&quot;)+&quot;, v=&quot;+v);
+ program: ex(&quot;service&quot;,&quot;sendResults.&quot;)
+ command: end i2cLightSensor
+ command: run i2cLightSensor
+ result:
+ device=light, Date=2021/4/30/ 0:43:4, v=0
+ currentDevice=&quot;yamaRasPiDp1_1&quot;,Date=2021/4/30/ 0:43:4
+</textarea>
+ 
+j=1555 k=1562
+head=[[FrontPage]]
+
+ 'objectPage http://192.168.10.14/ex01/?LightSensor-01 or http://192.168.10.14/ex01/?LightSensor-01
+ objectPage http://192.168.1.10/ex01/?LightSensor-01 or http://192.168.1.10/ex01/?LightSensor-01
+ device yamaRasPiDp1_1 or yamaRasPiDp1_1 start after no write for 10 min.
+ command: set readInterval=15000
+ command: set execInterval=0
+ command: program i2cLightSensor
+ program: '
+ program: ' init i2c
+ program: ex(&quot;pi4j&quot;, &quot;i2c use 1&quot;)
+ program: '
+ program: ' init lux sensor 
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x03&quot;) 'power up the tsl2561 lux sensor
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x81,0x00&quot;)
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x86,0x00&quot;) 'scale
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x00&quot;) 'power down
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x03&quot;) ' power up again
+ program: delay(50)
+ program: '
+ program: 'get the lux value
+ program: v1=ex(&quot;pi4j&quot;, &quot;i2c read1 0x29,0x8c&quot;)
+ program: v2=ex(&quot;pi4j&quot;, &quot;i2c read1 0x29,0x8d&quot;)
+ program: v=s2i(v2)*256+s2i(v1)
+ program: '
+ program: ex(&quot;pi4j&quot;, &quot;i2c close.&quot;)
+ program: ex(&quot;service&quot;,&quot;clear sendBuffer&quot;)
+ program: ex(&quot;service&quot;,&quot;putSendBuffer device=light, Date=&quot;+ex(&quot;service&quot;,&quot;getCurrentDate.&quot;)+&quot;, v=&quot;+v);
+ program: ex(&quot;service&quot;,&quot;sendResults.&quot;)
+ command: end i2cLightSensor
+ command: run i2cLightSensor
+ result:
+body=
+ device=light, Date=2021/4/30/ 0:43:4, v=0
+ currentDevice=&quot;yamaRasPiDp1_1&quot;,Date=2021/4/30/ 0:43:4
+tail=</textarea>
+  <br />
+  <div style="float:left;">
+   <input type="submit" name="preview" value="プレビュー" accesskey="p" />
+   <input type="submit" name="write"   value="ページの更新" accesskey="s" />
+   
+   <input type="checkbox" name="notimestamp" id="_edit_form_notimestamp" value="true" />
+   <label for="_edit_form_notimestamp"><span class="small">タイムスタンプを変更しない</span></label>
+&nbsp;
+  </div>
+  <textarea name="original" rows="1" cols="1" style="display:none">[[FrontPage]]
+
+ 'objectPage http://192.168.10.14/ex01/?LightSensor-01 or http://192.168.10.14/ex01/?LightSensor-01
+ objectPage http://192.168.1.10/ex01/?LightSensor-01 or http://192.168.1.10/ex01/?LightSensor-01
+ device yamaRasPiDp1_1 or yamaRasPiDp1_1 start after no write for 10 min.
+ command: set readInterval=15000
+ command: set execInterval=0
+ command: program i2cLightSensor
+ program: '
+ program: ' init i2c
+ program: ex(&quot;pi4j&quot;, &quot;i2c use 1&quot;)
+ program: '
+ program: ' init lux sensor 
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x03&quot;) 'power up the tsl2561 lux sensor
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x81,0x00&quot;)
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x86,0x00&quot;) 'scale
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x00&quot;) 'power down
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x03&quot;) ' power up again
+ program: delay(50)
+ program: '
+ program: 'get the lux value
+ program: v1=ex(&quot;pi4j&quot;, &quot;i2c read1 0x29,0x8c&quot;)
+ program: v2=ex(&quot;pi4j&quot;, &quot;i2c read1 0x29,0x8d&quot;)
+ program: v=s2i(v2)*256+s2i(v1)
+ program: '
+ program: ex(&quot;pi4j&quot;, &quot;i2c close.&quot;)
+ program: ex(&quot;service&quot;,&quot;clear sendBuffer&quot;)
+ program: ex(&quot;service&quot;,&quot;putSendBuffer device=light, Date=&quot;+ex(&quot;service&quot;,&quot;getCurrentDate.&quot;)+&quot;, v=&quot;+v);
+ program: ex(&quot;service&quot;,&quot;sendResults.&quot;)
+ command: end i2cLightSensor
+ command: run i2cLightSensor
+ result:
+ device=light, Date=2021/4/30/ 0:43:4, v=0
+ currentDevice=&quot;yamaRasPiDp1_1&quot;,Date=2021/4/30/ 0:43:4
+</textarea>
+ 
+actionwork1= action="./" method="post" class="_plugin_edit_edit_form" style="margin-bottom:0;"
+action url=./
+ encode_hint=ぷ
+ template=読込
+ cmd=edit
+ page=LightSensor-01
+ digest=f71bd8f9421182802801c046948d0d2b
+ =編集中のテキストは破棄されます。よろしいですか
+ =入力したデータは保存されません。
+ preview=プレビュー
+ write=ページの更新
+url=./
+editWriteValue=ページの更新
+editCmd=edit
+editPage=LightSensor-01
+digest=f71bd8f9421182802801c046948d0d2b
+java.lang.IllegalArgumentException: host parameter is nullSaveButtonDebuFram.replaceTextWith(device=light, Date=2021/5/1/ 2:26:24, v=0
+currentDevice="yamaRasPiDp1_1",Date=2021/5/1/ 2:26:24
+) error:java.lang.IllegalArgumentException: host parameter is null
+msg.updateText=[[FrontPage]]
+
+ 'objectPage http://192.168.10.14/ex01/?LightSensor-01 or http://192.168.10.14/ex01/?LightSensor-01
+ objectPage http://192.168.1.10/ex01/?LightSensor-01 or http://192.168.1.10/ex01/?LightSensor-01
+ device yamaRasPiDp1_1 or yamaRasPiDp1_1 start after no write for 10 min.
+ command: set readInterval=15000
+ command: set execInterval=0
+ command: program i2cLightSensor
+ program: '
+ program: ' init i2c
+ program: ex("pi4j", "i2c use 1")
+ program: '
+ program: ' init lux sensor 
+ program: ex("pi4j", "i2c write1 0x29,0x80,0x03") 'power up the tsl2561 lux sensor
+ program: ex("pi4j", "i2c write1 0x29,0x81,0x00")
+ program: ex("pi4j", "i2c write1 0x29,0x86,0x00") 'scale
+ program: ex("pi4j", "i2c write1 0x29,0x80,0x00") 'power down
+ program: ex("pi4j", "i2c write1 0x29,0x80,0x03") ' power up again
+ program: delay(50)
+ program: '
+ program: 'get the lux value
+ program: v1=ex("pi4j", "i2c read1 0x29,0x8c")
+ program: v2=ex("pi4j", "i2c read1 0x29,0x8d")
+ program: v=s2i(v2)*256+s2i(v1)
+ program: '
+ program: ex("pi4j", "i2c close.")
+ program: ex("service","clear sendBuffer")
+ program: ex("service","putSendBuffer device=light, Date="+ex("service","getCurrentDate.")+", v="+v);
+ program: ex("service","sendResults.")
+ command: end i2cLightSensor
+ command: run i2cLightSensor
+ result:
+ device=light, Date=2021/5/1/ 2:26:24, v=0
+ currentDevice="yamaRasPiDp1_1",Date=2021/5/1/ 2:26:24
+ 
+write.editWriteValue=ページの更新
+cmd.editCmd=edit
+page.editPage=LightSensor-01
+digest.editDigest=f71bd8f9421182802801c046948d0d2b
+
+	at org.apache.commons.httpclient.HttpConnection.setHost(HttpConnection.java:249)
+	at org.apache.commons.httpclient.SimpleHttpConnectionManager.getConnectionWithTimeout(SimpleHttpConnectionManager.java:189)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:153)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:323)
+	at org.yamaLab.pukiwikiCommunicator.connector.SaveButtonDebugFrame.replaceTextWith(SaveButtonDebugFrame.java:804)
+	at org.yamaLab.pukiwikiCommunicator.connector.SaveButtonDebugFrame.saveText(SaveButtonDebugFrame.java:217)
+	at org.yamaLab.pukiwikiCommunicator.MainController.sendResults(MainController.java:1119)
+	at org.yamaLab.pukiwikiCommunicator.MainController.parseCommand(MainController.java:979)
+	at org.yamaLab.pukiwikiCommunicator.Basic.applyMiscOperation(Basic.java:66)
+	at org.yamaLab.pukiwikiCommunicator.language.ALisp.apply(ALisp.java:590)
+	at org.yamaLab.pukiwikiCommunicator.language.ALisp.eval(ALisp.java:720)
+	at org.yamaLab.pukiwikiCommunicator.language.ALisp.progn(ALisp.java:211)
+	at org.yamaLab.pukiwikiCommunicator.language.ALisp.eval(ALisp.java:710)
+	at org.yamaLab.pukiwikiCommunicator.language.ALisp.preEval(ALisp.java:467)
+	at org.yamaLab.pukiwikiCommunicator.language.ABasic.evalList(ABasic.java:147)
+	at org.yamaLab.pukiwikiCommunicator.Basic.runProgram(Basic.java:44)
+	at org.yamaLab.pukiwikiCommunicator.Basic.parseCommand(Basic.java:892)
+	at org.yamaLab.pukiwikiCommunicator.MainController.parseInputCommand(MainController.java:286)
+	at org.yamaLab.pukiwikiCommunicator.MainController.execCommands(MainController.java:941)
+	at org.yamaLab.pukiwikiCommunicator.MainController.setInput(MainController.java:197)
+	at org.yamaLab.pukiwikiCommunicator.connector.SaveButtonDebugFrame.readFromPukiwikiPageAndSetData(SaveButtonDebugFrame.java:893)
+	at org.yamaLab.pukiwikiCommunicator.MainController$1.run(MainController.java:668)
+frequency=0
+frequency=0
+editUrl=http://192.168.1.10/ex01/?LightSensor-01
+
+setPageOfTheURL editUrl=http://192.168.1.10/ex01/?LightSensor-01
+connectButton.actionPerformed, url=http://192.168.1.10/ex01/?LightSensor-01
+new getMethod(http://192.168.1.10/ex01/?LightSensor-01)
+l=<?xml
+r=?>
+l=<head
+r=</head>
+l=<meta
+r=/>
+pageCharSet=UTF-8
+l=<body>
+r=</body>
+l=<div id="header">
+r=</div>
+l=<span class="small">
+r=</span>
+setPageOfTheURL(http://192.168.1.10/ex01/?LightSensor-01)baseUrl=http://192.168.1.10/ex01/
+l=<pre>
+r=</pre>
+setPageOfTheURL editUrl=http://192.168.1.10/ex01/?LightSensor-01
+connectButton.actionPerformed, url=http://192.168.1.10/ex01/?LightSensor-01
+new getMethod(http://192.168.1.10/ex01/?LightSensor-01)
+l=<?xml
+r=?>
+l=<head
+r=</head>
+l=<meta
+r=/>
+pageCharSet=UTF-8
+l=<body>
+r=</body>
+l=<div id="header">
+r=</div>
+l=<span class="small">
+r=</span>
+setPageOfTheURL(http://192.168.1.10/ex01/?LightSensor-01)baseUrl=http://192.168.1.10/ex01/
+editPageButton.actionPerformed, event=null
+editUrl=http://192.168.1.10/ex01/?cmd=edit&page=LightSensor-01
+baseUrl=http://192.168.1.10/ex01/
+
+http://192.168.1.10/ex01/?cmd=edit&page=LightSensor-01
+
+connectButton.actionPerformed, url=http://192.168.1.10/ex01/?cmd=edit&page=LightSensor-01
+new getMethod(http://192.168.1.10/ex01/?cmd=edit&page=LightSensor-01)
+l=<form
+r=</form>
+form= action="./" method="post" class="_plugin_edit_edit_form" style="margin-bottom:0;">
+<div><input type="hidden" name="encode_hint" value="ぷ" /></div>
+  <select name="template_page">
+   <option value="">-- 雛形とするページ --</option>
+   <option value="a">a</option>
+   <option value="AutoTicketLinkName">AutoTicketLinkName</option>
+   <option value="BracketName">BracketName</option>
+   <option value="FormattingRules">FormattingRules</option>
+   <option value="FrontPage">FrontPage</option>
+   <option value="Help">Help</option>
+   <option value="InterWiki">InterWiki</option>
+   <option value="InterWikiName">InterWikiName</option>
+   <option value="InterWikiSandBox">InterWikiSandBox</option>
+   <option value="LightSensor-01">LightSensor-01</option>
+   <option value="MenuBar">MenuBar</option>
+   <option value="PHP">PHP</option>
+   <option value="PukiWiki">PukiWiki</option>
+   <option value="PukiWiki/1.4">PukiWiki/1.4</option>
+   <option value="PukiWiki/1.4/Manual">PukiWiki/1.4/Manual</option>
+   <option value="PukiWiki/1.4/Manual/Plugin">PukiWiki/1.4/Manual/Plugin</option>
+   <option value="PukiWiki/1.4/Manual/Plugin/A-D">PukiWiki/1.4/Manual/Plugin/A-D</option>
+   <option value="PukiWiki/1.4/Manual/Plugin/E-G">PukiWiki/1.4/Manual/Plugin/E-G</option>
+   <option value="PukiWiki/1.4/Manual/Plugin/H-K">PukiWiki/1.4/Manual/Plugin/H-K</option>
+   <option value="PukiWiki/1.4/Manual/Plugin/L-N">PukiWiki/1.4/Manual/Plugin/L-N</option>
+   <option value="PukiWiki/1.4/Manual/Plugin/O-R">PukiWiki/1.4/Manual/Plugin/O-R</option>
+   <option value="PukiWiki/1.4/Manual/Plugin/S-U">PukiWiki/1.4/Manual/Plugin/S-U</option>
+   <option value="PukiWiki/1.4/Manual/Plugin/V-Z">PukiWiki/1.4/Manual/Plugin/V-Z</option>
+   <option value="SandBox">SandBox</option>
+   <option value="WikiEngines">WikiEngines</option>
+   <option value="WikiName">WikiName</option>
+   <option value="WikiWikiWeb">WikiWikiWeb</option>
+   <option value="YukiWiki">YukiWiki</option>
+  </select>
+  <input type="submit" name="template" value="読込" accesskey="r" />
+  <br />
+  
+  <input type="hidden" name="cmd"    value="edit" />
+  <input type="hidden" name="page"   value="LightSensor-01" />
+  <input type="hidden" name="digest" value="f71bd8f9421182802801c046948d0d2b" />
+  <input type="hidden" id="_msg_edit_cancel_confirm" value="編集中のテキストは破棄されます。よろしいですか ?" />
+  <input type="hidden" id="_msg_edit_unloadbefore_message" value="入力したデータは保存されません。" />
+  <textarea name="msg" rows="20" cols="80">[[FrontPage]]
+
+ 'objectPage http://192.168.10.14/ex01/?LightSensor-01 or http://192.168.10.14/ex01/?LightSensor-01
+ objectPage http://192.168.1.10/ex01/?LightSensor-01 or http://192.168.1.10/ex01/?LightSensor-01
+ device yamaRasPiDp1_1 or yamaRasPiDp1_1 start after no write for 10 min.
+ command: set readInterval=15000
+ command: set execInterval=0
+ command: program i2cLightSensor
+ program: '
+ program: ' init i2c
+ program: ex(&quot;pi4j&quot;, &quot;i2c use 1&quot;)
+ program: '
+ program: ' init lux sensor 
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x03&quot;) 'power up the tsl2561 lux sensor
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x81,0x00&quot;)
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x86,0x00&quot;) 'scale
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x00&quot;) 'power down
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x03&quot;) ' power up again
+ program: delay(50)
+ program: '
+ program: 'get the lux value
+ program: v1=ex(&quot;pi4j&quot;, &quot;i2c read1 0x29,0x8c&quot;)
+ program: v2=ex(&quot;pi4j&quot;, &quot;i2c read1 0x29,0x8d&quot;)
+ program: v=s2i(v2)*256+s2i(v1)
+ program: '
+ program: ex(&quot;pi4j&quot;, &quot;i2c close.&quot;)
+ program: ex(&quot;service&quot;,&quot;clear sendBuffer&quot;)
+ program: ex(&quot;service&quot;,&quot;putSendBuffer device=light, Date=&quot;+ex(&quot;service&quot;,&quot;getCurrentDate.&quot;)+&quot;, v=&quot;+v);
+ program: ex(&quot;service&quot;,&quot;sendResults.&quot;)
+ command: end i2cLightSensor
+ command: run i2cLightSensor
+ result:
+ device=light, Date=2021/4/30/ 0:43:4, v=0
+ currentDevice=&quot;yamaRasPiDp1_1&quot;,Date=2021/4/30/ 0:43:4
+</textarea>
+  <br />
+  <div style="float:left;">
+   <input type="submit" name="preview" value="プレビュー" accesskey="p" />
+   <input type="submit" name="write"   value="ページの更新" accesskey="s" />
+   
+   <input type="checkbox" name="notimestamp" id="_edit_form_notimestamp" value="true" />
+   <label for="_edit_form_notimestamp"><span class="small">タイムスタンプを変更しない</span></label>
+&nbsp;
+  </div>
+  <textarea name="original" rows="1" cols="1" style="display:none">[[FrontPage]]
+
+ 'objectPage http://192.168.10.14/ex01/?LightSensor-01 or http://192.168.10.14/ex01/?LightSensor-01
+ objectPage http://192.168.1.10/ex01/?LightSensor-01 or http://192.168.1.10/ex01/?LightSensor-01
+ device yamaRasPiDp1_1 or yamaRasPiDp1_1 start after no write for 10 min.
+ command: set readInterval=15000
+ command: set execInterval=0
+ command: program i2cLightSensor
+ program: '
+ program: ' init i2c
+ program: ex(&quot;pi4j&quot;, &quot;i2c use 1&quot;)
+ program: '
+ program: ' init lux sensor 
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x03&quot;) 'power up the tsl2561 lux sensor
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x81,0x00&quot;)
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x86,0x00&quot;) 'scale
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x00&quot;) 'power down
+ program: ex(&quot;pi4j&quot;, &quot;i2c write1 0x29,0x80,0x03&quot;) ' power up again
+ program: delay(50)
+ program: '
+ program: 'get the lux value
+ program: v1=ex(&quot;pi4j&quot;, &quot;i2c read1 0x29,0x8c&quot;)
+ program: v2=ex(&quot;pi4j&quot;, &quot;i2c read1 0x29,0x8d&quot;)
+ program: v=s2i(v2)*256+s2i(v1)
+ program: '
+ program: ex(&quot;pi4j&quot;, &quot;i2c close.&quot;)
+ program: ex(&quot;service&quot;,&quot;clear sendBuffer&quot;)
+ program: ex(&quot;service&quot;,&quot;putSendBuffer device=light, Date=&quot;+ex(&quot;service&quot;,&quot;getCurrentDate.&quot;)+&quot;, v=&quot;+v);
+ program: ex(&quot;service&quot;,&quot;sendResults.&quot;)
+ command: end i2cLightSensor
+ command: run i2cLightSensor
+ result:
+ device=light, Date=2021/4/30/ 0:43:4, v=0
+ currentDevice=&quot;yamaRasPiDp1_1&quot;,Date=2021/4/30/ 0:43:4
+</textarea>
+ 
+z=[[FrontPage]]
+
+ 'objectPage http://192.168.10.14/ex01/?LightSensor-01 or http://192.168.10.14/ex01/?LightSensor-01
+ objectPage http://192.168.1.10/ex01/?LightSensor-01 or http://192.168.1.10/ex01/?LightSensor-01
